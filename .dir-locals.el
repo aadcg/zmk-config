@@ -1,0 +1,1 @@
+(("\\.keymap\\'" . ((mode . dts-mode))))
