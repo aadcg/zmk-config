@@ -137,7 +137,7 @@
             label= "NAV";
             bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
-                &kp PG_UP   &kp HOME    &kp UP      &kp END     &none           &kp LS(F10) &kp LC(TAB) &kp LC(LS(TAB)) &none   &cxp
+                &kp PG_UP   &kp HOME    &kp UP      &kp END     &none           &kp LS(F10) &kp LC(LS(TAB)) &kp LC(TAB) &none   &cxp
                 &kp PG_DN   &kp LEFT    &kp DOWN    &kp RIGHT   &cxg            &none       &kp LSHFT   &kp LCTRL   &kp LALT    &kp LGUI
     &kp ESC     UNDO        CUT         COPY        PASTE       REDO            &cx4        &cx0        &cx1        &cx2        &cx3        &cxplus
                                         &kp RET     &trans      &kp TAB         &none       &none       &none
