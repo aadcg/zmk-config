@@ -16,6 +16,8 @@
 #define SYM  5
 #define CTL  6
 
+#define AS(keycode) &as LS(keycode) keycode // Autoshift Macro
+
 #define COPY  &kp LC(INS)
 #define PASTE &kp LS(INS)
 #define CUT   &kp LS(DEL)
@@ -43,8 +45,8 @@
         as: auto_shift {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping_term_ms = <200>;
-            quick_tap_ms = <150>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -64,61 +66,51 @@
     };
     macros {
         cx0: cx0 {
-            label = "C-x 0";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LC(X) &kp N1>;
         };
         cx1: cx1 {
-            label = "C-x 1";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LC(X) &kp N1>;
         };
         cx2: cx2 {
-            label = "C-x 2";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LC(X) &kp N2>;
         };
         cx3: cx3 {
-            label = "C-x 3";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LC(X) &kp N3>;
         };
         cx4: cx4 {
-            label = "C-x 4";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LC(X) &kp N4>;
         };
         cxp: cxp {
-            label = "C-x p";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LC(X) &kp P>;
         };
         cxg: cxg {
-            label = "C-x g";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LC(X) &kp G>;
         };
         cxb: cxb {
-            label = "C-x b";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LC(X) &kp B>;
         };
         cxplus: cxplus {
-            label = "C-x +";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LC(X) &kp PLUS>;
         };
         gif: gif {
-            label = "giphy";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -135,9 +127,9 @@
             label= "BASE";
             bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
-                &kp Q       &kp W       &kp E       &kp R       &kp T           &kp Y       &kp U       &as LS(I) I &kp O       &kp P
+                &kp Q       &kp W       &kp E       &kp R       &kp T           &kp Y       &kp U       AS(I)       &kp O       &kp P
                 &mt LGUI A  &mt LALT S  &mt LCTRL D &mt LSHFT F &kp G           &kp H       &mt RSHFT J &mt RCTRL K &mt LALT L  &mt RGUI SEMI
-    &kp MINUS   &mt RALT Z  &mt LC(X) X &mt LC(C) C &mt LA(X) V &kp B           &kp N       &kp M       &kp COMMA   &kp DOT     &mt RALT FSLH &kp SQT
+    &kp MINUS   &mt RALT Z  &mt LC(X) X &mt LC(C) C &mt LA(X) V &kp B           &kp N       &kp M       &kp COMMA   &kp DOT     &mt RALT FSLH AS(SQT)
                                         &lt SYM ESC &mt LCTRL SPACE &lt NUM TAB &lt DE RET  &lt NAV BSPC &lt RAT DEL
             >;
         };
@@ -175,10 +167,10 @@
             label= "NUM";
             bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
-                &none       &none       &none       &none       &none           &none       &kp N7      &kp N8      &kp N9      &kp KP_EQUAL
-                &kp LGUI    &kp LALT    &kp LCTRL   &kp LSHFT   &mo CTL         &kp KP_MINUS &kp N4     &kp N5      &kp N6      &kp KP_PLUS
-    &trans      &none       &none       &none       &none       &none           &kp KP_SLASH &kp N1     &kp N2      &kp N3      &kp KP_MULTIPLY &kp KP_ENTER
-                                        &none       &none       &none           &kp SPACE   &kp N0      &kp BSPC
+                &none       &none       &none       &none       &none           &none       AS(N7)      AS(N8)      AS(N9)      &kp KP_EQUAL
+                &kp LGUI    &kp LALT    &kp LCTRL   &kp LSHFT   &mo CTL         &kp KP_MINUS AS(N4)     AS(N5)      AS(N6)      &kp KP_PLUS
+    &trans      &none       &none       &none       &none       &none           &kp KP_SLASH ASN1       AS(N2)      AS(N3)      &kp KP_MULTIPLY &kp KP_ENTER
+                                        &none       &none       &none           &kp SPACE   AS(N0)      &kp BSPC
             >;
         };
         sym_layer {
