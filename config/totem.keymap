@@ -169,7 +169,7 @@
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
                 &none       &none       &none       &none       &none           &none       AS(N7)      AS(N8)      AS(N9)      &kp KP_EQUAL
                 &kp LGUI    &kp LALT    &kp LCTRL   &kp LSHFT   &mo CTL         &kp KP_MINUS AS(N4)     AS(N5)      AS(N6)      &kp KP_PLUS
-    &trans      &none       &none       &none       &none       &none           &kp KP_SLASH ASN1       AS(N2)      AS(N3)      &kp KP_MULTIPLY &kp KP_ENTER
+    &trans      &none       &none       &none       &none       &none           &kp KP_SLASH AS(N1)     AS(N2)      AS(N3)      &kp KP_MULTIPLY &kp KP_ENTER
                                         &none       &none       &none           &kp SPACE   AS(N0)      &kp BSPC
             >;
         };
