@@ -35,12 +35,12 @@
 
 / {
     behaviors {
-        pt: hold_tap {
+        sbt: switch_buffer_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <250>;
-            bindings = <&cxp>, <&kp>;
+            bindings = <&cxb>, <&kp>;
         };
         as: auto_shift {
             compatible = "zmk,behavior-hold-tap";
@@ -129,7 +129,7 @@
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
                 &kp Q       &kp W       &kp E       &kp R       &kp T           &kp Y       &kp U       AS(I)       &kp O       &kp P
                 &mt LGUI A  &mt LALT S  &mt LCTRL D &mt LSHFT F &kp G           &kp H       &mt RSHFT J &mt RCTRL K &mt LALT L  &mt RGUI SEMI
-    &kp MINUS   &mt RALT Z  &mt LC(X) X &mt LC(C) C &mt LA(X) V &kp B           &kp N       &kp M       &kp COMMA   &kp DOT     &mt RALT FSLH AS(SQT)
+    &kp MINUS   &mt RALT Z  &mt LC(X) X &mt LC(C) C &mt LA(X) V &sbt 0 B        &kp N       &kp M       &kp COMMA   &kp DOT     &mt RALT FSLH AS(SQT)
                                         &lt SYM ESC &mt LCTRL SPACE &lt NUM TAB &lt DE RET  &lt NAV BSPC &lt RAT DEL
             >;
         };
