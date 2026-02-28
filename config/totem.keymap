@@ -69,7 +69,7 @@
         cx0: cx0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(X) &kp N1>;
+            bindings = <&kp LC(X) &kp N0>;
         };
         cx1: cx1 {
             compatible = "zmk,behavior-macro";
