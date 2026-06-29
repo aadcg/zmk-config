@@ -24,6 +24,8 @@
 #define UNDO  &kp C_AC_UNDO
 #define REDO  &kp C_AC_REDO
 
+/* TODO Add french and portuguese diactricts */
+
 // require-prior-idle-ms = <80>;
 &mt {
     flavor = "tap-preferred"; // try balanced flavour
@@ -47,7 +49,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <0>; // repeats anyway, why?
+            quick-tap-ms = <0>; // TODO repeats anyway, why?
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -166,6 +168,7 @@
         };
         num_layer {
             label= "NUM";
+            /* think about space, return and backspace keys  */
             bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
                 &none       &none       &none       &none       &none           &none       AS(N7)      AS(N8)      AS(N9)      &kp KP_EQUAL
