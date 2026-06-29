@@ -181,7 +181,7 @@
             label= "SYM";
             bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
-                &trans      &trans      &kp FSLH    &kp PIPE    &kp BSLH        &kp GRAVE   &kp AMPS    &kp STAR    &kp CARET   &none
+                &trans      &kp BSLH    &kp PIPE    &kp FSLH    &trans          &kp GRAVE   &kp AMPS    &kp STAR    &kp CARET   &none
                 &trans      &trans      &trans      &trans      &trans          &kp MINUS   &kp LPAR    &kp LBKT    &kp LBRC    &kp SEMI
     &kp MINUS   &kp EXCL    &kp AT      &kp HASH    &kp DOLLAR  &kp PRCNT       &kp TILDE   &kp RPAR    &kp RBKT    &kp RBRC    &none    &trans
                                         &trans      &trans      &trans          &kp PLUS    &kp EQUAL   &kp UNDER
